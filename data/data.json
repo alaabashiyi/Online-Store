@@ -1,0 +1,66 @@
+{
+  "products": [
+    {
+      "name": "PlayStation 4",
+      "_price": "350",
+      "shippableTo": [
+        "Turkey",
+        "Japan"
+      ],
+      "hasVAT": "true",
+      "cat": "console",
+      "imgURL": "item1",
+      "id": 1
+    },
+    {
+      "name": "Galaxy s20",
+      "_price": "1100",
+      "shippableTo": [
+        "Israel",
+        "Italy",
+        "Japan"
+      ],
+      "hasVAT": "true",
+      "cat": "mobile",
+      "imgURL": "item2",
+      "id": 2
+    },
+    {
+      "name": "Logitech G933",
+      "_price": "280",
+      "shippableTo": [
+        "Israel",
+        "Italy",
+        "Japan"
+      ],
+      "hasVAT": "true",
+      "cat": "headset",
+      "imgURL": "item4",
+      "id": 3
+    },
+    {
+      "name": "Lenovo S7",
+      "_price": "545",
+      "shippableTo": [
+        "Israel",
+        "Italy"
+      ],
+      "hasVAT": "true",
+      "cat": "laptop",
+      "imgURL": "item5",
+      "id": 4
+    },
+    {
+      "name": "Javascript",
+      "_price": "799",
+      "shippableTo": [
+        "Israel",
+        "Japan"
+      ],
+      "hasVAT": "true",
+      "cat": "laptop",
+      "imgURL": "item5",
+      "id": 5
+    }
+  ]
+}

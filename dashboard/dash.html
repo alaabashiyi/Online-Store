@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+      integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
+      integrity="sha256-h20CPZ0QyXlBuAw7A+KluUYx/3pK+c7lYEpqLTlxjYQ="
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="dash.css" />
+
+    <title>Dashboard</title>
+  </head>
+  <body>
+    <div class="container">
+      <form>
+        <div class="form-row">
+          <div class="form-group col-md-4">
+            <label for="inputAddress">Name:</label>
+            <input
+              type="text"
+              class="form-control dash-input"
+              id="name"
+              placeholder="Enter name..."
+            />
+          </div>
+          <div class="form-group col-md-4">
+            <label for="inputAddress">Price:</label>
+            <input
+              type="number"
+              class="form-control dash-input"
+              id="_price"
+              placeholder="Enter price..."
+            />
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="inputAddress2">Shippable to:</label>
+          <div class="form-check">
+            <ul class="list-group list-group-flush col-sm-1">
+              <li class="list-group-item">
+                <input
+                  class="form-check-input checkboxes"
+                  type="checkbox"
+                  id="gridCheck1"
+                  value="Israel"
+                />
+                <label class="form-check-label" for="gridCheck1">
+                  Israel
+                </label>
+              </li>
+              <li class="list-group-item">
+                <input
+                  class="form-check-input checkboxes"
+                  type="checkbox"
+                  id="gridCheck2"
+                  value="Italy"
+                />
+                <label class="form-check-label" for="gridCheck2">
+                  Italy
+                </label>
+              </li>
+              <li class="list-group-item">
+                <input
+                  class="form-check-input checkboxes"
+                  type="checkbox"
+                  id="gridCheck3"
+                  value="Turkey"
+                />
+                <label class="form-check-label" for="gridCheck3">
+                  Turkey
+                </label>
+              </li>
+              <li class="list-group-item">
+                <input
+                  class="form-check-input checkboxes"
+                  type="checkbox"
+                  id="gridCheck4"
+                  value="Japan"
+                />
+                <label class="form-check-label" for="gridCheck4">
+                  Japan
+                </label>
+              </li>
+              <li class="list-group-item">
+                <input
+                  class="form-check-input checkboxes"
+                  type="checkbox"
+                  id="gridCheck5"
+                  value="Australia"
+                />
+                <label class="form-check-label" for="gridCheck5">
+                  Australia
+                </label>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group col-md-4">
+            <label for="inputCity">Has Vat?</label>
+            <select id="hasVAT" class="form-control dash-input">
+              <option selected value="true">Yes</option>
+              <option value="false">No</option>
+            </select>
+          </div>
+          <div class="form-group col-md-4">
+            <label for="inputState">Category:</label>
+            <select id="cat" class="form-control dash-input">
+              <option selected value="mobile">mobile</option>
+              <option value="laptop">laptop</option>
+              <option value="desktop">desktop</option>
+              <option value="headset">headset</option>
+              <option value="console">console</option>
+            </select>
+          </div>
+          <div class="form-group col-md-8">
+            <label for="inputAddress">Image URL:</label>
+            <input
+              type="text"
+              class="form-control dash-input"
+              id="imgURL"
+              placeholder="Add URL here"
+            />
+          </div>
+        </div>
+
+        <button type="submit" id="dash-submit" class="btn btn-primary">
+          Add Item
+        </button>
+      </form>
+    </div>
+
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+      integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+      crossorigin="anonymous"
+    ></script>
+    <script src="../Product.js"></script>
+    <script src="Dashboard.js"></script>
+  </body>
+</html>
