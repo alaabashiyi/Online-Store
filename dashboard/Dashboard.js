@@ -1,3 +1,4 @@
+import Product from "../modules/Product.js";
 const inputs = [...document.querySelectorAll(".dash-input")];
 const checkboxs = [...document.querySelectorAll(".checkboxes")];
 const newRequest = new XMLHttpRequest();

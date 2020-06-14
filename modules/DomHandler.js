@@ -9,14 +9,18 @@ const formatter = new Intl.NumberFormat("en-US", {
   minimumFractionDigits: 2,
 });
 
-class DomHandler {
+export default class DomHandler {
+  constructor(alaa, cart) {
+    this.alaa = alaa;
+    this.cart = cart;
+  }
   listener() {
     document.querySelectorAll("div.item button").forEach((btn) => {
       btn.addEventListener("click", (e) => {
-        cart.addProduct(e.target.parentNode.type);
-        this.updateShoppingCart(cart.products);
-        this.addTypeToCartItems(cart.products);
-        this.saveCartToLocalStorage(cart.products);
+        this.cart.addProduct(e.target.parentNode.type);
+        this.updateShoppingCart(this.cart.products);
+        this.addTypeToCartItems(this.cart.products);
+        this.saveCartToLocalStorage(this.cart.products);
       });
 
       document
@@ -33,21 +37,21 @@ class DomHandler {
     });
 
     document.querySelector("#clear-cart-1").addEventListener("click", () => {
-      cart.clearCart();
-      this.updateShoppingCart(cart.products);
+      this.cart.clearCart();
+      this.updateShoppingCart(this.cart.products);
     });
     document.querySelector("#clear-cart-2").addEventListener("click", () => {
-      cart.clearCart();
-      this.updateShoppingCart(cart.products);
+      this.cart.clearCart();
+      this.updateShoppingCart(this.cart.products);
     });
   }
 
   checkoutCart() {
     try {
-      cart.checkout(alaa);
-      cart.ship("Israel");
-      cart.clearCart();
-      domUpdates.updateShoppingCart(cart.products);
+      this.cart.checkout(this.alaa);
+      this.cart.ship("Israel");
+      this.cart.clearCart();
+      this.updateShoppingCart(this.cart.products);
 
       checkoutMsgBox.forEach((cartCont) => {
         cartCont.innerHTML = `
@@ -106,10 +110,10 @@ class DomHandler {
       `;
       itemsContainer.insertAdjacentHTML("beforeend", item);
       document.querySelector("#user-balance-1").innerText = formatter.format(
-        alaa.balance
+        this.alaa.balance
       );
       document.querySelector("#user-balance-2").innerText = formatter.format(
-        alaa.balance
+        this.alaa.balance
       );
     });
 
@@ -125,11 +129,7 @@ class DomHandler {
             <img src="imgs/${prod.imgURL}.jpg" alt="" />
             <div class="left-side-cart-item">
             <h5>${prod.name}</h5>
-            <div> 
-            <i class="fas fa-plus"></i>
-            <input type="number" class="quantity-box" value="1"/>
-            <i class="fas fa-minus"></i>
-            </div>
+            
             <small>${formatter.format(Number(prod._price))}</small>
             </div>
             </div>
@@ -145,24 +145,24 @@ class DomHandler {
     this.numberOfCartItems();
     document.querySelector(
       "#cart-total-price-1 small"
-    ).innerText = formatter.format(cart.totalPrice);
+    ).innerText = formatter.format(this.cart.totalPrice);
     document.querySelector(
       "#cart-total-price-2 small"
-    ).innerText = formatter.format(cart.totalPrice);
+    ).innerText = formatter.format(this.cart.totalPrice);
     document.querySelector("#user-balance-1").innerText = formatter.format(
-      alaa.balance
+      this.alaa.balance
     );
     document.querySelector("#user-balance-2").innerText = formatter.format(
-      alaa.balance
+      this.alaa.balance
     );
 
-    this.addTypeToCartItems(cartt);
+    this.addTypeToCartItems(this.cart.products);
   }
 
   numberOfCartItems() {
     document
       .querySelectorAll(".number-of-cart-items")
-      .forEach((itm) => (itm.innerText = cart.products.length));
+      .forEach((itm) => (itm.innerText = this.cart.products.length));
   }
 
   addTypeToProducts(products) {
@@ -190,9 +190,9 @@ class DomHandler {
   removeItemFromCart() {
     document.querySelectorAll("div.item-in-cart button").forEach((rmbtn) => {
       rmbtn.addEventListener("click", (e) => {
-        cart.removeProduct(e.target.parentNode.type);
-        this.updateShoppingCart(cart.products);
-        this.saveCartToLocalStorage(cart.products);
+        this.cart.removeProduct(e.target.parentNode.type);
+        this.updateShoppingCart(this.cart.products);
+        this.saveCartToLocalStorage(this.cart.products);
       });
     });
   }

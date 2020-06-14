@@ -1,4 +1,4 @@
-class ShoppingCart {
+export default class ShoppingCart {
   constructor() {
     this.initCart();
   }

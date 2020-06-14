@@ -1,4 +1,6 @@
-class Sortby {
+const itemsContainer = document.querySelector("#items-container");
+
+export default class Sortby {
   constructor() {
     // itemsContainer.innerHTML = "";
   }

@@ -61,6 +61,19 @@
       "cat": "laptop",
       "imgURL": "item5",
       "id": 5
+    },
+    {
+      "name": "alaa",
+      "_price": "707",
+      "shippableTo": [
+        "Israel",
+        "Italy",
+        "Japan"
+      ],
+      "hasVAT": "true",
+      "cat": "desktop",
+      "imgURL": "item9",
+      "id": 6
     }
   ]
 }

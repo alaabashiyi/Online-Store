@@ -1,4 +1,4 @@
-class filterItems {
+export default class filterItems {
   resetFilter() {
     [...document.querySelectorAll("#items-container div.item")].forEach(
       (curr) => {

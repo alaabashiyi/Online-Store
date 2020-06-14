@@ -16,3 +16,5 @@ class Product {
     return this._price;
   }
 }
+
+export default Product;
